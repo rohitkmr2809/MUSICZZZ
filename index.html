@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Melody - Music Player</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-headphones"></i>
+            <span>Melody</span>
+        </div>
+
+        <nav>
+            <a href="#" class="active">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-compass"></i>
+                Discover
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-heart"></i>
+                Liked Songs
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                Recently Played
+            </a>
+        </nav>
+
+        <div class="playlist-section">
+            <h3>Your Library</h3>
+
+            <a href="#">
+                <i class="fa-solid fa-music"></i>
+                My Playlist
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-plus"></i>
+                Create Playlist
+            </a>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search songs, artists..."
+                >
+            </div>
+
+            <div class="profile">
+                <div class="profile-img">R</div>
+                <span>Rohit</span>
+            </div>
+
+        </header>
+
+
+        <!-- HERO -->
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="small-text">YOUR MUSIC</p>
+
+                <h1>Feel the music.<br>Live the moment.</h1>
+
+                <p>
+                    Discover your favorite songs and enjoy
+                    your music everywhere.
+                </p>
+
+                <button class="explore-btn" id="exploreBtn">
+                    <i class="fa-solid fa-play"></i>
+                    Start Listening
+                </button>
+
+            </div>
+
+            <div class="hero-circle">
+                <i class="fa-solid fa-compact-disc"></i>
+            </div>
+
+        </section>
+
+
+        <!-- CONTENT -->
+        <section class="content">
+
+            <div class="section-header">
+                <h2>Popular Songs</h2>
+
+                <button id="seeAllBtn">
+                    See All
+                </button>
+            </div>
+
+
+            <!-- SONG LIST -->
+            <div class="song-list" id="songList">
+
+                <div class="song"
+                     data-title="Blinding Lights"
+                     data-artist="The Weeknd"
+                     data-src="music/1.mp3">
+
+                    <div class="song-number">01</div>
+
+                    <div class="song-cover cover-1">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+
+                    <div class="song-info">
+                        <h3>Blinding Lights</h3>
+                        <p>The Weeknd</p>
+                    </div>
+
+                    <span class="song-duration">3:20</span>
+
+                    <button class="like-btn">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button class="play-song">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="song"
+                     data-title="Starboy"
+                     data-artist="The Weeknd"
+                     data-src="music/starboy.mp3">
+
+                    <div class="song-number">02</div>
+
+                    <div class="song-cover cover-2">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+
+                    <div class="song-info">
+                        <h3>Starboy</h3>
+                        <p>The Weeknd</p>
+                    </div>
+
+                    <span class="song-duration">3:50</span>
+
+                    <button class="like-btn">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button class="play-song">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="song"
+                     data-title="Shape of You"
+                     data-artist="Ed Sheeran"
+                     data-src="music/2.mp3">
+
+                    <div class="song-number">03</div>
+
+                    <div class="song-cover cover-3">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+
+                    <div class="song-info">
+                        <h3>Shape of You</h3>
+                        <p>Ed Sheeran</p>
+                    </div>
+
+                    <span class="song-duration">3:53</span>
+
+                    <button class="like-btn">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button class="play-song">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="song"
+                     data-title="Perfect"
+                     data-artist="Ed Sheeran"
+                     data-src="music/3.mp3">
+
+                    <div class="song-number">04</div>
+
+                    <div class="song-cover cover-4">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+
+                    <div class="song-info">
+                        <h3>Perfect</h3>
+                        <p>Ed Sheeran</p>
+                    </div>
+
+                    <span class="song-duration">4:23</span>
+
+                    <button class="like-btn">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button class="play-song">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="song"
+                     data-title="Levitating"
+                     data-artist="Dua Lipa"
+                     data-src="music/4.mp3">
+
+                    <div class="song-number">05</div>
+
+                    <div class="song-cover cover-5">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+
+                    <div class="song-info">
+                        <h3>Levitating</h3>
+                        <p>Dua Lipa</p>
+                    </div>
+
+                    <span class="song-duration">3:23</span>
+
+                    <button class="like-btn">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button class="play-song">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- MUSIC PLAYER -->
+    <div class="music-player">
+
+        <!-- CURRENT SONG -->
+        <div class="current-song">
+
+            <div class="current-cover">
+                <i class="fa-solid fa-music"></i>
+            </div>
+
+            <div>
+                <h3 id="currentTitle">Select a song</h3>
+                <p id="currentArtist">Artist</p>
+            </div>
+
+        </div>
+
+
+        <!-- CONTROLS -->
+        <div class="player-controls">
+
+            <div class="buttons">
+
+                <button id="shuffleBtn">
+                    <i class="fa-solid fa-shuffle"></i>
+                </button>
+
+                <button id="previousBtn">
+                    <i class="fa-solid fa-backward-step"></i>
+                </button>
+
+                <button class="main-play" id="playBtn">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+
+                <button id="nextBtn">
+                    <i class="fa-solid fa-forward-step"></i>
+                </button>
+
+                <button id="repeatBtn">
+                    <i class="fa-solid fa-repeat"></i>
+                </button>
+
+            </div>
+
+
+            <div class="progress-area">
+
+                <span id="currentTime">0:00</span>
+
+                <input
+                    type="range"
+                    id="progressBar"
+                    min="0"
+                    max="100"
+                    value="0"
+                >
+
+                <span id="duration">0:00</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- VOLUME -->
+        <div class="volume">
+
+            <i class="fa-solid fa-volume-high"></i>
+
+            <input
+                type="range"
+                id="volumeBar"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.8"
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- AUDIO -->
+    <audio id="audioPlayer"></audio>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
